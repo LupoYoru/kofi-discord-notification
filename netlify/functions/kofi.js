@@ -97,7 +97,7 @@ app.use('/', async function (req, res) {
 				embed.setColor('#9b59b6');
 		}
 
-		embed.addField(`Von`, `${payload.from_name}`, true);
+		/*embed.addField(`Von`, `${payload.from_name}`, true);*/
 		embed.addField(`Typ`, `${payload.type}`, true);
 		embed.addField(`Betrag`, `${payload.amount} ${payload.currency}`, true);
 		if (payload.message && payload.message !== 'null')
