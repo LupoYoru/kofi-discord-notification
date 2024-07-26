@@ -81,8 +81,8 @@ app.use('/', async function (req, res) {
 	try {
 		const embed = new MessageBuilder();
 
-		embed.setAuthor('Ko-fi', 'https://i.imgur.com/J0egcX2.png');
-		embed.setThumbnail('https://i.imgur.com/J0egcX2.png');
+		embed.setAuthor('Ko-fi', 'https://storage.ko-fi.com/cdn/nav-logo-stroke.png');
+		embed.setThumbnail('https://info.empyris.de/wp-content/uploads/2024/05/empyris_emblem.png');
 		embed.setTitle('Neuer Empyris Supporter auf Ko-fi 🍪');
 		if (kofi_username) embed.setURL(`https://ko-fi.com/${kofi_username}`);
 
