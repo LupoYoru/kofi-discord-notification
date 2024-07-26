@@ -83,7 +83,7 @@ app.use('/', async function (req, res) {
 
 		embed.setAuthor('Ko-fi', 'https://i.imgur.com/J0egcX2.png');
 		embed.setThumbnail('https://i.imgur.com/J0egcX2.png');
-		embed.setTitle('New supporter on Ko-fi ☕');
+		embed.setTitle('Neuer Empyris Supporter auf Ko-fi 🍪');
 		if (kofi_username) embed.setURL(`https://ko-fi.com/${kofi_username}`);
 
 		switch (payload.tier_name) {
@@ -97,13 +97,13 @@ app.use('/', async function (req, res) {
 				embed.setColor('#9b59b6');
 		}
 
-		embed.addField(`From`, `${payload.from_name}`, true);
-		embed.addField(`Type`, `${payload.type}`, true);
-		embed.addField(`Amount`, `${payload.amount} ${payload.currency}`, true);
+		embed.addField(`Von`, `${payload.from_name}`, true);
+		embed.addField(`Typ`, `${payload.type}`, true);
+		embed.addField(`Betrag`, `${payload.amount} ${payload.currency}`, true);
 		if (payload.message && payload.message !== 'null')
-			embed.addField(`Message`, `${payload.message}`);
+			embed.addField(`Nachricht`, `${payload.message}`);
 		embed.setFooter(
-			`Thank you for supporting us!`,
+			`Empyris dankt Dir vielmals für Deine Unterstützung!`,
 			`https://github.githubassets.com/images/modules/site/icons/funding_platforms/ko_fi.svg`
 		);
 		embed.setTimestamp();
