@@ -97,8 +97,17 @@ app.use('/', async function (req, res) {
 				embed.setColor('#9b59b6');
 		}
 
+		// Hier wird der Payload-Type geändert
+		let typ = `${payload.type}`;
+		if (typ === "Subscription") {
+			typ = "Keksabo";
+		} else if (typ === "Donation") {
+			typ = "Keksspende";
+		}
+	
 		/*embed.addField(`Von`, `${payload.from_name}`, true);*/
-		embed.addField(`Typ`, `${payload.type}`, true);
+		/*embed.addField(`Typ`, `${payload.type}`, true);*/ //Original Payload-Type
+		embed.addField(`Typ`, typ, true);  // Verwende hier den geänderten Payload-Type
 		embed.addField(`Betrag`, `${payload.amount} ${payload.currency}`, true);
 		if (payload.message && payload.message !== 'null')
 			embed.addField(`Nachricht`, `${payload.message}`);
