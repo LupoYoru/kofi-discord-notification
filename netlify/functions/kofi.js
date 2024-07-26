@@ -81,7 +81,7 @@ app.use('/', async function (req, res) {
 	try {
 		const embed = new MessageBuilder();
 
-		/*embed.setAuthor('Ko-fi', 'https://storage.ko-fi.com/cdn/nav-logo-stroke.png');*/
+		embed.setAuthor('Ko-fi', 'https://storage.ko-fi.com/cdn/nav-logo-stroke.png');
 		embed.setThumbnail('https://static.wikia.nocookie.net/empyris/images/e/e6/Site-logo.png/revision/latest?cb=20240318123259&path-prefix=de');
 		embed.setTitle('Neuer Empyris Supporter auf Ko-fi 🍪');
 		if (kofi_username) embed.setURL(`https://ko-fi.com/${kofi_username}`);
